@@ -4,7 +4,7 @@ paramount-ng
 Based on [my personal fork of paramount][3], which was based on:
 
 - [owickstrom/vim-colors-paramount][1]
-- ...which itself is based on [vim-colors-paramount][2].
+- ...which itself is based on [vim-colors-pencil][2].
 
 Built using [Lush][4].
 

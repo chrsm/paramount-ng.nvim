@@ -93,7 +93,7 @@ local theme = lush(function()
     -- Popup
     Pmenu {
       -- #606060
-      bg = hsl(0, 0, 38),
+      bg = hsl(0, 0, 18),
       fg = norm,
     },
     PmenuSel {
@@ -143,7 +143,7 @@ local theme = lush(function()
     },
     Ignore {
       -- 262626
-      fg = hsl(0, 0, 15),
+      fg = hsl(0, 0, 19),
     },
     Error {
       fg = hsl(0, 0, 100),
@@ -334,8 +334,34 @@ local theme = lush(function()
     TSDanger { Error, gui = "underline" },
     TSType { Statement },
     TSTypeBuiltin { Constant },
-    TSVariable {  Identifier },
+    TSVariable { Identifier },
     TSVariableBuiltin { Constant },
+
+    -- Plugin-specific support
+    WhichKey {
+      bg = hsl(0, 0, 15),
+      fg = hsl(260, 45, 70),
+    },
+    WhichKeyGroup {
+      bg = hsl(0, 0, 15),
+      fg = WhichKey.fg.darken(5),
+    },
+    WhichKeySeparator {
+      bg = hsl(0, 0, 15),
+      fg = WhichKey.fg.darken(30),
+    },
+    WhichKeyDesc {
+      bg = hsl(0, 0, 15),
+      fg = hsl(0, 0, 58),
+    },
+    WhichKeyFloat {
+      bg = hsl(0, 0, 15),
+      fg = hsl(0, 0, 78),
+    },
+    WhichKeyValue {
+      bg = hsl(0, 0, 15),
+      fg = hsl(0, 0, 78),
+    },
   }
 
   return base

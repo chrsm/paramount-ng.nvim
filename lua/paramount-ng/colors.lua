@@ -97,8 +97,8 @@ local theme = lush(function()
       fg = norm,
     },
     PmenuSel {
-      fg = norm,
-      bg = hsl(260, 45, 70),
+      fg = hsl(0, 0, 100),
+      bg = Cursor.bg.darken(50),
     },
     PmenuSbar {
       fg = hsl(0, 0, 100),
@@ -172,8 +172,9 @@ local theme = lush(function()
       bg = hsl(55, 89, 57),
     },
     Search {
-      fg = hsl(0, 0, 31),
-      bg = hsl(156, 60, 61),
+      fg = hsl(0, 0, 100),
+      bg = Constant.fg.darken(10),
+      --hsl(156, 60, 31),
     },
     MoreMsg {
       fg = hsl(0, 0, 38),
@@ -362,6 +363,9 @@ local theme = lush(function()
       bg = hsl(0, 0, 15),
       fg = hsl(0, 0, 78),
     },
+
+    CmpItemAbbrMatch { Constant },
+    CmpItemAbbrMatchFuzzy { Constant },
   }
 
   return base

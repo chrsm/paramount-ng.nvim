@@ -146,9 +146,8 @@ local theme = lush(function()
       fg = hsl(0, 0, 19),
     },
     Error {
-      fg = hsl(0, 0, 100),
-      -- E32791
-      bg = hsl(326, 77, 52),
+      fg = hsl(0, 0, 19),
+      bg = hsl(350, 67, 63),
       cterm = "bold",
       gui = "bold",
     },
@@ -174,7 +173,6 @@ local theme = lush(function()
     Search {
       fg = hsl(0, 0, 100),
       bg = Constant.fg.darken(10),
-      --hsl(156, 60, 31),
     },
     MoreMsg {
       fg = hsl(0, 0, 38),
@@ -191,12 +189,8 @@ local theme = lush(function()
       bg = hsl(0, 0, 19),
     },
 
-    Question {
-      fg = hsl(326, 77, 52),
-    },
-    WarningMsg {
-      fg = hsl(326, 77, 52),
-    },
+    Question { Error },
+    WarningMsg { Error },
 
     StatusLine {
       bg = hsl(0, 0, 19),
@@ -242,9 +236,7 @@ local theme = lush(function()
       -- #5FD7A7
       fg = hsl(156, 60, 61),
     },
-    DiffDelete {
-      fg = hsl(326, 77, 52),
-    },
+    DiffDelete { WarningMsg },
     DiffChange {
       -- A89C14
       fg = hsl(55, 79, 37),
